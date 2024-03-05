@@ -1,0 +1,9 @@
+def Indian_Currency(Number):
+    num_str = str(Number)
+    num_str = num_str[::-1]
+    digit = [num_str[i:i+2] for i in range(0, len(num_str), 2)]
+    result = ",".join(digit)[::-1]
+    return result
+input = 50467
+output = Indian_Currency(input)
+print(f"Input: {input}\nOutput: {output}")
